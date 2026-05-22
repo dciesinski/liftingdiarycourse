@@ -14,9 +14,10 @@ npm run lint     # ESLint
 
 ## IMPORTANT: Documentation First
 
-Before writing ANY code, you MUST first read the relevant documentation file in the `/docs` directory. This applies to every feature, component, or API you are about to implement. Do not rely on training data — always consult `/docs` first.
+Before writing ANY code, you MUST first read the relevant documentation file in the `/docs` directory. This applies to every feature, component, or API you are about to implement. Do not rely on training data — always consult `/docs` first:
 
 - /docs/ui.md
+- /docs/data-fetching.md
 
 ## Architecture
 
