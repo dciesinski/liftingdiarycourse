@@ -1,7 +1,9 @@
 import { auth } from "@clerk/nextjs/server";
 import { format, parseISO } from "date-fns";
 import { Suspense } from "react";
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
 import { DatePicker } from "./DatePicker";
 import { getWorkoutsForUserOnDate } from "@/data/workouts";
 
@@ -47,7 +49,15 @@ export default async function DashboardPage({
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black p-8">
       <div className="max-w-2xl mx-auto flex flex-col gap-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Dashboard</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold tracking-tight">Lifting Diary</h1>
+          <Link
+            href="/dashboard/workout/new"
+            className={buttonVariants()}
+          >
+            New Workout
+          </Link>
+        </div>
 
         <DatePicker selected={date} />
 
