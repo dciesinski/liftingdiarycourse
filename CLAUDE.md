@@ -20,6 +20,8 @@ Before writing ANY code, you MUST first read the relevant documentation file in 
 - /docs/data-fetching.md
 - /docs/data-mutations.md
 - /docs/auth.md
+- /docs/server-components.md
+- /docs/routing.md
 
 ## Architecture
 
