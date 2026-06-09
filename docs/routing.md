@@ -12,10 +12,12 @@
 
 **All `/dashboard` routes are protected and require an authenticated user.**
 
-Route protection is enforced exclusively via Next.js middleware using Clerk. Do not implement manual auth redirects inside individual page components.
+Route protection is enforced exclusively via the Next.js proxy file using Clerk. Do not implement manual auth redirects inside individual page components.
+
+> **Next.js 16 note:** The `middleware.ts` convention is deprecated. Use `proxy.ts` at the project root instead.
 
 ```ts
-// middleware.ts (project root)
+// proxy.ts (project root)
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const isProtectedRoute = createRouteMatcher(["/dashboard(.*)"]);
