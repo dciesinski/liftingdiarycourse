@@ -21,7 +21,10 @@
       "Bash(dir node_modules/next/dist/docs/)",
       "Bash(npx tsc *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(findstr /i \"next\\\\|clerk\")",
+      "Bash(xargs grep -l -i middleware)",
+      "Bash(Remove-Item *)"
     ]
   },
   "enabledMcpjsonServers": [
