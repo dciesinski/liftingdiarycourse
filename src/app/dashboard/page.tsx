@@ -20,16 +20,18 @@ async function WorkoutList({ userId, date }: { userId: string; date: Date }) {
         <p className="text-sm text-zinc-500">No workouts logged for this date.</p>
       ) : (
         workouts.map((workout) => (
-          <Card key={workout.id}>
-            <CardHeader className="pb-1">
-              <CardTitle className="text-base">{workout.name ?? "Untitled Workout"}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-zinc-500">
-                {workout.exerciseCount} {workout.exerciseCount === 1 ? "exercise" : "exercises"}
-              </p>
-            </CardContent>
-          </Card>
+          <Link key={workout.id} href={`/dashboard/workout/${workout.id}`}>
+            <Card className="hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors cursor-pointer">
+              <CardHeader className="pb-1">
+                <CardTitle className="text-base">{workout.name ?? "Untitled Workout"}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-zinc-500">
+                  {workout.exerciseCount} {workout.exerciseCount === 1 ? "exercise" : "exercises"}
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
         ))
       )}
     </div>
