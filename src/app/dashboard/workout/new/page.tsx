@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
@@ -33,6 +34,12 @@ export default function NewWorkoutPage() {
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black p-8">
       <div className="max-w-md mx-auto flex flex-col gap-6">
+        <Link
+          href="/dashboard"
+          className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+        >
+          ← Back to Dashboard
+        </Link>
         <h1 className="text-2xl font-semibold tracking-tight">New Workout</h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">

@@ -29,7 +29,8 @@
       "Bash(git push *)",
       "Bash(winget install *)",
       "PowerShell(winget install *)",
-      "PowerShell(Move-Item *)"
+      "PowerShell(Move-Item *)",
+      "mcp__neon__run_sql"
     ]
   },
   "enabledMcpjsonServers": [

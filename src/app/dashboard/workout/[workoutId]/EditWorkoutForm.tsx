@@ -43,9 +43,8 @@ export default function EditWorkoutForm({ workout }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-black p-8">
-      <div className="max-w-md mx-auto flex flex-col gap-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Edit Workout</h1>
+    <div className="flex flex-col gap-6">
+      <h1 className="text-2xl font-semibold tracking-tight">Edit Workout</h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div className="flex flex-col gap-1.5">
@@ -86,7 +85,6 @@ export default function EditWorkoutForm({ workout }: Props) {
             </Button>
           </div>
         </form>
-      </div>
     </div>
   );
 }
